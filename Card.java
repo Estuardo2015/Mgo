@@ -3,17 +3,19 @@
  October 9, 2018
 */
 
+import java.lang.String;
+
 public abstract class Card {
 
-    private CardType _type; //PROPERRT, ACTION, or CASH
-    private int _value;
+    private String _name;
 
+    protected int _value;
+    protected boolean _canPutInBank;
 
+    public int getValue(){
+	return _value; }
 
-    public int getValue()
-	return _value;
-
-    public CardType getType()
-	return _type;
+    public boolean getCanPutInBank(){
+	return _canPutInBank; }
 
 }
