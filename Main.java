@@ -1,10 +1,14 @@
 public class Main {
     public static void main(String args[])
     {
-	NormalRentActionCard rent = 
+	NormalRentActionCard blueGreenRent = 
 	 new NormalRentActionCard(PropertyColor.BLUE, PropertyColor.GREEN);
-	RainbowRentActionCard rainbow = new RainbowRentActionCard();
-	System.out.println(rent.contains(PropertyColor.BROWN));
-	System.out.println(rainbow.contains(PropertyColor.BLUE));
+	RainbowRentActionCard rainbowRent = new RainbowRentActionCard();
+
+	System.out.println(blueGreenRent.contains(PropertyColor.BROWN));
+	System.out.println(rainbowRent.contains(PropertyColor.BLUE));
+
+	System.out.println(rainbowRent.getValue());
+	System.out.println(rainbowRent.getCanPutInBank());
     }
 }

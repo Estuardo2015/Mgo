@@ -7,6 +7,7 @@ public abstract class ActionCard extends Card {
 
     protected NumTargets _numTargets; //ONE or MANY
 
-    //_canPutInBank = false;
-
+    public ActionCard(){
+	this._canPutInBank = true;
+    }
 }

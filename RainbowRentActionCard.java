@@ -11,6 +11,7 @@ public class RainbowRentActionCard extends RentActionCard{
 	_value = 3; //Card value is 3 million
 	_numTargets = NumTargets.ONE; //May only be played on one target
 
+
 	colors.add(PropertyColor.BROWN);
 	colors.add(PropertyColor.BLUE);
 	colors.add(PropertyColor.GREEN);
