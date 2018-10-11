@@ -12,10 +12,10 @@ import java.util.Set;
 
 public abstract class RentActionCard extends ActionCard {
 
-    public Set<PropertyColor> colors = new HashSet<>();
+    public Set<PropertyColor> rentColors = new HashSet<>();
 
     public boolean contains(PropertyColor color){
-	return colors.contains(color);
+	return rentColors.contains(color);
 	//return if a rent card contains that color or not
     }
 
