@@ -17,6 +17,7 @@ public class NormalPropertyCard extends PropertyCard {
 //include:
 /*
  -name
+ -color
  -value
  -canBank (always no - put before switch statement)
  -rent ammounts

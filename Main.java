@@ -15,5 +15,12 @@ public class Main {
 
 	System.out.println(rainbowRent.getValue());
 	System.out.println(rainbowRent.getCanPutInBank());
+
+	RentPrice blueRent = new RentPrice(3, 8);
+	PropertySet bluePropertySet = new PropertySet(2, blueRent);
+	bluePropertySet.addProperty();
+	bluePropertySet.addProperty();
+	bluePropertySet.removeProperty();
+	System.out.println(bluePropertySet.getRent());
     }
 }
