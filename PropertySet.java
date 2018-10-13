@@ -6,12 +6,17 @@
 */
 
 public class PropertySet {
-    private int _currentPropertiesInSet;
+    private int _currentPropertiesInSet;//replace w/ a data structure of cards
     private int _fullSetSize;
     private RentPrice _rentPrice;
 
-    PropertySet(int fullSetSize, RentPrice RentPriceObject){
-	_fullSetSize = fullSetSize;
+    //bool canBuildHouses
+    //bool houseBuilt
+    //bool hotelBuilt
+
+
+    PropertySet(RentPrice RentPriceObject){
+	_fullSetSize = RentPriceObject.getPropertyClass();
 	_rentPrice = RentPriceObject;
     }
 
