@@ -20,8 +20,6 @@ public class NormalPropertyCard extends PropertyCard {
  -color
  -value
  -canBank (always no - put before switch statement)
- -rent ammounts
- -canBuildStructure (how should this look for wildcards?)
 */
     }
 }

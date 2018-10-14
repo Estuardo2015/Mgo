@@ -3,20 +3,17 @@
 
  A PropertySet represents the set of cards that forms from stacking
  one or more cards of the same color together.
+
+ Parent: N/A
+ Children: NormalPropertySet, NoHousePropertySet
+
 */
 
-public class PropertySet {
-    private int _currentPropertiesInSet;//replace w/ a data structure of cards
-    private int _fullSetSize;
-    private RentPrice _rentPrice;
-
-    //bool canBuildHouses
-    //bool houseBuilt
-    //bool hotelBuilt
-
+public abstract class PropertySet {
+    protected int _currentPropertiesInSet;//replace w/ a data structure of cards
+    protected RentPrice _rentPrice;
 
     PropertySet(RentPrice RentPriceObject){
-	_fullSetSize = RentPriceObject.getPropertyClass();
 	_rentPrice = RentPriceObject;
     }
 
@@ -26,6 +23,10 @@ public class PropertySet {
 
     public void removeProperty(){
 	_currentPropertiesInSet--;
+    }
+
+    public int getFullSetSize(){
+	return _rentPrice.getPropertyClass;
     }
 
     public int getRent(){
