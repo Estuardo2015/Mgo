@@ -8,20 +8,34 @@
  Children: NormalPropertySet, NoHousePropertySet
 
 */
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class PropertySet {
-    protected int _currentPropertiesInSet;//replace w/ a data structure of cards
+//	Represents all cards in a given stack, including properties, wild, and structures.
+    protected List<Card> cardSet = new ArrayList<>();
+
+//	Represents the possible rent prices that can apply to those cards.
     protected RentPrice _rentPrice;
 
+
+//	Function: Initialize w/ a rent price of given arg
+//	Pre: A RentPrice object has been initialized
+//	Post: PropertySet is initialized
     PropertySet(RentPrice RentPriceObject){
 	_rentPrice = RentPriceObject;
     }
 
-    public void addProperty(){
-	_currentPropertiesInSet++;
+
+//	Function: Add a card to the given PropertySet object (PropertyCard or Structure)
+//	Pre: A PropertySet has been initialized, and a Card is passed
+//	Post: A card has been added to PropertySet
+    public void addCard(Card newCard){
+	cardSet.add(newCard);
     }
 
-    public void removeProperty(){
+//	Removes a Card from PropertySet
+    public void removeCard(Card oldCard){
 	_currentPropertiesInSet--;
     }
 
