@@ -15,41 +15,13 @@ public class Main {
 
 	System.out.println(rainbowRent.getValue());
 	System.out.println(rainbowRent.getCanPutInBank());
-
-	TwoPropRentPrice blueRent = new TwoPropRentPrice(3, 8);
-	NormalPropertySet bluePropertySet = new PropertySet(blueRent);
-	bluePropertySet.addProperty();
-	bluePropertySet.addProperty();
-	bluePropertySet.addProperty();
-	bluePropertySet.addProperty();
-	bluePropertySet.addProperty();
-	bluePropertySet.removeProperty();
-	bluePropertySet.removeProperty();
-	bluePropertySet.addProperty();
-	bluePropertySet.removeProperty();
-	bluePropertySet.removeProperty();
-	bluePropertySet.removeProperty();
-
 	
 	System.out.println(bluePropertySet.getRent());
 
-	ThreePropRentPrice greenRent = new ThreePropRentPrice(2, 4, 7);
+	RentPrice greenRent = new RentPrice(PropertyColor.GREEN);
 	PropertySet greenPropertySet = new PropertySet(greenRent);
 	greenPropertySet.addProperty();
 	greenPropertySet.addProperty();
 	System.out.println(greenPropertySet.getRent());
-
-
-	FourPropRentPrice railRent = new FourPropRentPrice(1, 2, 3, 4);
-	PropertySet railPropertySet = new PropertySet(railRent);
-
-	railPropertySet.addProperty();
-	railPropertySet.addProperty();
-	railPropertySet.addProperty();
-	railPropertySet.addProperty();
-	railPropertySet.addProperty();
-	railPropertySet.addProperty();
-	System.out.println(railPropertySet.getRent());
-
     }
 }

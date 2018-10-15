@@ -19,10 +19,9 @@ public abstract class PropertySet {
     protected RentPrice _rentPrice;
 
 
-//	Function: Initialize w/ a rent price of given arg
-//	Pre: A RentPrice object has been initialized
-//	Post: PropertySet is initialized
-    PropertySet(RentPrice RentPriceObject){
+//	Pre:	A propertyCard is being passed
+//	Post:	A PropertySet is initialized
+    PropertySet(PropertyCard card){
 	_rentPrice = RentPriceObject;
     }
 

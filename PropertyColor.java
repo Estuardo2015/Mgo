@@ -2,7 +2,7 @@
  Nick Soetaert
 */
 
+//10 colors:
 public enum PropertyColor {
-    BROWN, BLUE, GREEN, LIGHT_BLUE,
-    ORANGE, PINK, RED, YELLOW, RAIL, UTILITY
+      BROWN, LIGHT_BLUE, PINK, ORANGE, RED, YELLOW, GREEN, BLUE, BLACK
 }

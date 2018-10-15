@@ -7,7 +7,7 @@ import java.lang.String;
 
 public abstract class Card {
 
-    private String _name;
+    protected String _name;
     protected int _value;
     protected boolean _canPutInBank;
 

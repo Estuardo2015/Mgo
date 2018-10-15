@@ -6,19 +6,100 @@
 */
 
 //Parents: 	N/A
-//Child:	TwoPropRentPrice, ThreePropRentPrice, FourPropRentPrice
+//Child:	N/A
+//OLD:		TwoPropRentPrice, ThreePropRentPrice, FourPropRentPrice
 
-public abstract class RentPrice {
-    protected int _propertyClass; //2 for TwoProp, 3 for ThreeProp, etc.
-    protected final int _noPropRent = 0; //Any set w/ 0 properties has 0 rent
+public class RentPrice {
+    private int[] prices = new int[4];
 
-    public int getRent(int numProp){
-	return 0;
-    }
+        //Pre: The color of a PropertySet is passed
+        //Post: rent prices for length two PropertySets is declared.
+    public TwoPropRentPrice(PropertyColor color){
 
-    public int getPropertyClass(){
-	return _propertyClass;
-    }
-}
+        //The Great Switch Statement.
+        switch (color) {
+        case BROWN:
+            prices[0] = 1;
+            prices[1] = 2;
+            prices[2] = prices[1] + 3; //With house
+            prices[3] = prices[7] + 7; //With house + hotel
+            break;
+
+        case LIGHT_BLUE:
+            prices[0] = 1;
+            prices[1] = 2;
+            prices[2] = 3;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel
+            break;
+
+        case PINK:
+            prices[0] = 1;
+            prices[1] = 2;
+            prices[2] = 4;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel    prices[4] = ;  //house + hotel
+    break;
+
+        case ORANGE:
+            prices[0] = 1;
+            prices[1] = 3;
+            prices[2] = 5;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel    prices[4] = ;  //house + hotel
+            break;
+
+        case RED:
+            prices[0] = 2;
+            prices[1] = 3;
+            prices[2] = 6;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel
+            break;
+
+        case YELLOW:
+            prices[0] = 2;
+            prices[1] = 4;
+            prices[2] = 6;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel
+            break;
+
+        case GREEN:
+            prices[0] = 2;
+            prices[1] = 4;
+            prices[2] = 7;
+            prices[3] = prices[2] + 3;  //house
+            prices[4] = prices[2] + 7;  //house + hotel
+            break;
+
+        case BLUE:
+            prices[0] = 3;
+            prices[1] = 8;
+            prices[2] = prices[1] + 3; //house
+            prices[3] = prices[2] + 7; //house + hotel
+            break;
+
+        //Rail and Util. NO HOUSES/HOTELS
+        case BLACK:
+            prices[0] = 1;
+            prices[1] = 2;
+            prices[2] = 3;
+            prices[3] = 4;
+            break;
+
+	}  //end switch
+   }  //end constructor
 
 
+    //Pre: Number of cards in set is passed
+    //Post: Rent amount for given set is returned
+    public int getRent(int numCards){
+        return prices[numCards];
+    }   
+
+
+} //end class
+
+
+//	BROWN, LIGHT_BLUE, PINK, ORANGE, RED, YELLOW, GREEN, BLUE, BLACK
