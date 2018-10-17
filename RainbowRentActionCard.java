@@ -20,8 +20,7 @@ public class RainbowRentActionCard extends RentActionCard{
 	rentColors.add(PropertyColor.PINK);
 	rentColors.add(PropertyColor.RED);
 	rentColors.add(PropertyColor.YELLOW);
-	rentColors.add(PropertyColor.RAIL);
-	rentColors.add(PropertyColor.UTILITY);
-    }
+	rentColors.add(PropertyColor.BLACK);
+   }
 }
 

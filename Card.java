@@ -11,6 +11,10 @@ public abstract class Card {
     protected int _value;
     protected boolean _canPutInBank;
 
+
+    public String getName(){
+	return _name; }
+
     public int getValue(){
 	return _value; }
 

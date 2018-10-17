@@ -9,5 +9,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public abstract class PropertyCard extends Card {
-    public Set<PropertyColor> propertyColors = new HashSet<>();
+    protected PropertyColor currColor;
+    //ONLY FOR WILDS  - public Set<PropertyColor> propertyColors = new HashSet<>();
+
+    public PropertyColor getCurrColor(){
+	return currColor;
+    }
 }

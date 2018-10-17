@@ -11,25 +11,24 @@
 public class NormalPropertyCard extends PropertyCard {
     //Pre: A card color is given. All cards of same color are same.
     //Post: A card is constructed with proper value
-    public NormalPropertyCard(PropertyColor color){
+    public NormalPropertyCard(Property name){
 
-	propertyColors.add(color);  //Record the card's color, regardless of color
 	_canPutInBank = false;	//No NormalPropertyCard can be banked
 
-	switch (color):
-	case BROWN:
-	    _name = "Brown Property Card";
-	    _vale = 1;
+	switch (name){
+	case BALTIC_AVE:
+	    _name = "Baltic Ave";
+	    _value = 1;
+	    currColor = PropertyColor.BROWN;
 	    break;
-	case :
-	    _name = ;
-	    _value = ;
+	case BOARDWALK:
+	    _name = "Boardwalk";
+	    _value = 30;
 	    break;	
-	    
+	}	    
     }
 
-    public getColor(){
-	return <F8> 
+//    public getColor(){ 
 
 //todo: Create switch statement for every single property (ugh...)
 //include:
@@ -38,5 +37,5 @@ public class NormalPropertyCard extends PropertyCard {
  -value
  -canBank (always no - put before switch statement)
 */
-    }
+//    }
 }

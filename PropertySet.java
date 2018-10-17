@@ -5,14 +5,19 @@
  one or more cards of the same color together.
 
  Parent: N/A
- Children: NormalPropertySet, NoHousePropertySet
+ Children: N/A
 
 */
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PropertySet {
+public class PropertySet {
+
+    private boolean _canBuild;
+    private int _setSize;
+
 //	Represents all cards in a given stack, including properties, wild, and structures.
+//	Idea: A hashtable of linked lists of cards?
     protected List<Card> cardSet = new ArrayList<>();
 
 //	Represents the possible rent prices that can apply to those cards.
@@ -22,7 +27,7 @@ public abstract class PropertySet {
 //	Pre:	A propertyCard is being passed
 //	Post:	A PropertySet is initialized
     PropertySet(PropertyCard card){
-	_rentPrice = RentPriceObject;
+	_rentPrice = card.getCurrColor();
     }
 
 
@@ -35,11 +40,15 @@ public abstract class PropertySet {
 
 //	Removes a Card from PropertySet
     public void removeCard(Card oldCard){
-	_currentPropertiesInSet--;
+	cardSet.remove(oldCard);
+    }
+
+    public int getCurrentSize(){
+	return cardSet.size();
     }
 
     public int getFullSetSize(){
-	return _rentPrice.getPropertyClass;
+	return _setSize;
     }
 
     public int getRent(){

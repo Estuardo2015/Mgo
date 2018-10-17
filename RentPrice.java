@@ -14,7 +14,7 @@ public class RentPrice {
 
         //Pre: The color of a PropertySet is passed
         //Post: rent prices for length two PropertySets is declared.
-    public TwoPropRentPrice(PropertyColor color){
+    public RentPrice(PropertyColor color){
 
         //The Great Switch Statement.
         switch (color) {
