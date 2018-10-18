@@ -24,6 +24,7 @@ public class NormalPropertyCard extends PropertyCard {
 	case BOARDWALK:
 	    _name = "Boardwalk";
 	    _value = 30;
+	    currColor = PropertyColor.BLUE;
 	    break;	
 	}	    
     }
