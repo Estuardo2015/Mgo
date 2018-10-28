@@ -14,7 +14,6 @@ public class Main {
 	System.out.println(boardwalk.getValue());
 	System.out.println(boardwalk.getCanPutInBank());
 
-	System.out.println(blueGreenRent.getCanPutInBank());
-
+	WildPropertyCard w = new WildPropertyCard(PropertyColor.GREEN, PropertyColor.BLUE);
    }
 }
