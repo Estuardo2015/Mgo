@@ -48,7 +48,7 @@ public class WildPropertyCard extends PropertyCard {
         }
     }
 
-    public void setCurrentColor(PropertyColor c){
+    public void setCurrColor(PropertyColor c){
 	if(colors.contains(c)){
 	    currColor = c;
 	} else {

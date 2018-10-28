@@ -14,6 +14,23 @@ public class Main {
 	System.out.println(boardwalk.getValue());
 	System.out.println(boardwalk.getCanPutInBank());
 
-	WildPropertyCard w = new WildPropertyCard(PropertyColor.GREEN, PropertyColor.BLUE);
+	WildPropertyCard w = new WildPropertyCard(PropertyColor.BLUE, PropertyColor.GREEN);
+	w.setCurrColor(PropertyColor.BLUE);
+	System.out.println(w.getValue());
+	System.out.println(w.getCurrColor());
+	w.setCurrColor(PropertyColor.GREEN);
+	System.out.println(w.getCurrColor());
+
+	RainbowPropertyCard r = new RainbowPropertyCard();
+	r.setCurrColor(PropertyColor.PINK);
+	System.out.println(r.getCurrColor());
+	r.setCurrColor(PropertyColor.RED);
+	System.out.println(r.getCurrColor());
+	System.out.println(r.getValue());
+	System.out.println(r.getName());
+	System.out.println(r.getCanPutInBank());
+	
+	
+
    }
 }
