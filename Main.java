@@ -7,9 +7,14 @@ public class Main {
 	RainbowRentActionCard rainbowRent = new RainbowRentActionCard();
 
 	NormalPropertyCard boardwalk =
-	 new NormalPropertyCard(Property.BOARDWALK);
+	 new NormalPropertyCard(PropertyColor.BLUE);
 
 	System.out.println(boardwalk.getName());
+	System.out.println(boardwalk.getCurrColor());
+	System.out.println(boardwalk.getValue());
+	System.out.println(boardwalk.getCanPutInBank());
+
+	System.out.println(blueGreenRent.getCanPutInBank());
 
    }
 }
