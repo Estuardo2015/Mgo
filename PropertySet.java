@@ -17,7 +17,6 @@ public class PropertySet {
     private int _setSize;
 
 //	Represents all cards in a given stack, including properties, wild, and structures.
-//	Idea: A hashtable of linked lists of cards?
     protected List<Card> cardSet = new ArrayList<>();
 
 //	Represents the possible rent prices that can apply to those cards.

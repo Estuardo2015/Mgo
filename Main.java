@@ -1,6 +1,14 @@
 public class Main {
     public static void main(String args[])
     {
+
+	DebtCollectorActionCard dc = new DebtCollectorActionCard();
+
+	DoubleTheRentActionCard dr = new DoubleTheRentActionCard();
+	ForcedDealActionCard fd = new ForcedDealActionCard();
+	SlyDealActionCard sd = new SlyDealActionCard();
+	BirthdayActionCard b = new BirthdayActionCard();
+
 	NormalRentActionCard blueGreenRent = 
 	 new NormalRentActionCard(PropertyColor.BLUE, PropertyColor.GREEN);
 
@@ -8,11 +16,6 @@ public class Main {
 
 	NormalPropertyCard boardwalk =
 	 new NormalPropertyCard(PropertyColor.BLUE);
-
-	System.out.println(boardwalk.getName());
-	System.out.println(boardwalk.getCurrColor());
-	System.out.println(boardwalk.getValue());
-	System.out.println(boardwalk.getCanPutInBank());
 
 	WildPropertyCard w = new WildPropertyCard(PropertyColor.BLUE, PropertyColor.GREEN);
 	w.setCurrColor(PropertyColor.BLUE);
@@ -30,7 +33,7 @@ public class Main {
 	System.out.println(r.getName());
 	System.out.println(r.getCanPutInBank());
 	
-	
+	ForeclosureActionCard f = new ForeclosureActionCard();
 
    }
 }
