@@ -7,7 +7,6 @@
 
 //Parents: 	N/A
 //Child:	N/A
-//OLD:		TwoPropRentPrice, ThreePropRentPrice, FourPropRentPrice
 
 public class RentPrice {
     private int[] prices = new int[4];
@@ -80,13 +79,18 @@ public class RentPrice {
             prices[3] = prices[2] + 7; //house + hotel
             break;
 
-        //Rail and Util. NO HOUSES/HOTELS
-        case BLACK:
+        //Rail and Util have NO HOUSES/HOTELS
+        case RAIL:
             prices[0] = 1;
             prices[1] = 2;
             prices[2] = 3;
             prices[3] = 4;
             break;
+
+	case UTIL:
+	    prices[0] = 1;
+	    prices[1] = 2;
+	    break;
 
 	}  //end switch
    }  //end constructor

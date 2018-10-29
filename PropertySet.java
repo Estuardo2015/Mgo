@@ -17,7 +17,7 @@ public class PropertySet {
     private int _setSize;
 
 //	Represents all cards in a given stack, including properties, wild, and structures.
-    protected List<Card> cardSet = new ArrayList<>();
+    public ArrayList<Card> cardSet = new ArrayList<>();
 
 //	Represents the possible rent prices that can apply to those cards.
     protected RentPrice _rentPrice;
@@ -26,7 +26,7 @@ public class PropertySet {
 //	Pre:	A propertyCard is being passed
 //	Post:	A PropertySet is initialized
     PropertySet(PropertyCard card){
-	_rentPrice = card.getCurrColor();
+	_rentPrice = RentPrice(card.getCurrColor());
     }
 
 
