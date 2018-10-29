@@ -26,18 +26,24 @@ public class PropertySet {
 //	Pre:	A propertyCard is being passed
 //	Post:	A PropertySet is initialized
     PropertySet(PropertyCard card){
-	_rentPrice = RentPrice(card.getCurrColor());
+	_rentPrice = new RentPrice(card.getCurrColor());
     }
 
+	//Helper function to display cards while game is text based
+    public void displayCards(){
+	System.out.println("~~~~~~Property Set~~~~~~");
+	for(Card i : cardSet){
+	    System.out.println(i.getName());
+	}
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
 
-//	Function: Add a card to the given PropertySet object (PropertyCard or Structure)
 //	Pre: A PropertySet has been initialized, and a Card is passed
 //	Post: A card has been added to PropertySet
     public void addCard(Card newCard){
 	cardSet.add(newCard);
     }
 
-//	Removes a Card from PropertySet
     public void removeCard(Card oldCard){
 	cardSet.remove(oldCard);
     }
@@ -51,7 +57,7 @@ public class PropertySet {
     }
 
     public int getRent(){
-	return _rentPrice.getRent(_currentPropertiesInSet);
+	return _rentPrice.getRent(cardSet.size());
     }
 
 }

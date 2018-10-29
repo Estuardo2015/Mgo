@@ -11,38 +11,89 @@ import java.util.*;
 
 public class Player{
 
-    String name;
     ArrayList<Card> hand = new ArrayList<Card>();
     ArrayList<PropertySet> properties = new ArrayList<PropertySet>();
     int bank;
-    int movesLeft;
+    private int _movesLeft;
 
-    public Player(String name){
-	name = name;
-	
-	/*
+    public Player(){
+	//How do I draw cards?
 	for(int i = 0; i < 5; i++){
-	    hand.drawCard();
-	}*/
+	    //this.drawCard();
+	}
     }
 
 	//Helper function while game is text-based
-    public void displayCards(){
+    void displayCards(){
 	System.out.println("YOUR HAND:");
+	int i = 0;
 	for(Card c : hand){
-	    System.out.println(c.getName());
+	    i++;
+	    System.out.println(i + ") " + c.getName());
 	}
 	System.out.println("YOUR PROPERTIES:");
-	for(Card c : properties){
-	    System.out.println(c.getName());
+	for(PropertySet p : properties){
+	    p.displayCards();
 	}
-
-    public void startTurn(){
-	movesLeft = 3;
     }
 
-    public void useMove(){
-	//Text output should be replaced by graphical buttons in final game
+    void startTurn(){
+	_movesLeft = 3;
     }
+
+    void useMove(){
+	Scanner s = new Scanner(System.in);
+
+	while(_movesLeft > 0){
+	    System.out.println(" ");
+	    System.out.println("Would you like to...");
+	    System.out.println("a) Play a card from your hand");
+	    System.out.println("b) Move a card already played on the table");
+	    System.out.println("c) End your turn");
+	
+	    String input = s.nextLine();
+
+	    switch(input){
+	    case "a":
+	        playCard();
+	        break;
+	    case "b":
+	        endTurn();
+	        break;
+	    case "c":
+	        moveCard();
+	        break;
+	    default:
+	        System.out.println("Please only enter lower case letters a, b, or c.");
+	    }
+	}
+	while(hand.size() > 7){
+	    System.out.println("You have " + hand.size() 
+				+ " cards left at the end of your turn.");
+	    System.out.println("Select a card from your hand by index to discard:");
+	    displayCards();
+	    int input = s.nextInt();
+	}
+    }
+
+    void playCard(){
+	_movesLeft--;
+    }
+
+    void moveCard(){
+	_movesLeft--;
+    }
+
+    void endTurn(){
+	_movesLeft = 0;
+    }
+
+    void discard(int cardIndex){
+	hand.remove(cardIndex);
+    };
+
+
+
 
 }
+
