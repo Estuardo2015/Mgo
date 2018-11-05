@@ -16,10 +16,9 @@ public class Player{
     int bank;
     private int _movesLeft;
 
-    public Player(){
-	//How do I draw cards?
+    public Player(Deck deck){
 	for(int i = 0; i < 5; i++){
-	    //this.drawCard();
+	    deck.drawCard();
 	}
     }
 
@@ -41,6 +40,7 @@ public class Player{
 	_movesLeft = 3;
     }
 
+	//get rid of while loop? (what if you win mid turn?)
     void useMove(){
 	Scanner s = new Scanner(System.in);
 
